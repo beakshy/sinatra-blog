@@ -1,0 +1,22 @@
+{
+  "name": "Package Manager",
+  "version": "0.1.0",
+  "authors": [
+    "Mason Berkshire | beakshy@gmail.com"
+  ],
+  "main": "../public/js/main.js",
+  "moduleType": [
+    "node"
+  ],
+  "description": "Bower Packages",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

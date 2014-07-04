@@ -1,0 +1,11 @@
+<form action="/admin" method="post" accept-charset="utf-8">
+	<label>Title:</label>
+	<input type="text" name="article[title]" value="" />
+	<label>Content:</label>
+	<textarea name="article[content]" rows="3" cols="40"></textarea>
+	<label>Timestamp:</label>
+    <input type="text"  readonly name="article[timestamp]" value="<%= Time.now %>" />
+    <div class="btn-spacer">
+	<input class="btn offset" type="submit" value="Add article" /> or <a class="btn" href="/admin">Back</a>
+	</div>
+</form>

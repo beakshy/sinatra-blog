@@ -1,0 +1,8 @@
+<% @articles.each do |article| %>
+<article>
+	<h3><a href="/articles/<%= article.id %>"><%= article.title %></a></h3>
+	<div class="timestamp">Written <%= timestamp(article.timestamp) %></div>
+  <div><%= truncate(article.content , 100, '...</p>')  %></div>
+  <a href="/articles/<%= article.id %>">Read More &#8594; </a>
+</article>
+<% end %>

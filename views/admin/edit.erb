@@ -1,0 +1,17 @@
+<form action="/admin/<%= @article.id %>" method="post" accept-charset="utf-8">
+	<input name="_method" type="hidden" value="put" />
+	<label>Title:</label>
+	<input type="text" required name="article[title]" value="<%= @article.title %>" id="article[title]" />
+    <label>Timestamp:</label>
+    <input type="text" readonly name="article[timestamp]" value="<%= @article.timestamp %>" /><br /><br />
+    <label>Content:<label>
+    <textarea name="article[content]" rows="3" cols="40"><%= @article.content %></textarea>
+    <div class="btn-spacer">
+	<input class="btn offset" type="submit" value="Update article" /> or <a class='btn' href='/admin'>Back</a>
+	</div>
+</form>
+
+<form action="/admin/<%= @article.id %>" method="post">
+	<input type="hidden" name="_method" value="delete" />
+	<input class="btn clear" type="submit" value="Delete">
+</form>
