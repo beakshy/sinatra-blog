@@ -3,9 +3,13 @@
 	<label>Title:</label>
 	<input type="text" required name="article[title]" value="<%= @article.title %>" id="article[title]" />
     <label>Timestamp:</label>
-    <input type="text" readonly name="article[timestamp]" value="<%= @article.timestamp %>" /><br /><br />
+    <input type="text" readonly name="article[timestamp]" value="<%= @article.timestamp %>" />
     <label>Content:<label>
-    <textarea name="article[content]" rows="3" cols="40"><%= @article.content %></textarea>
+    <textarea name="article[content]"><%= @article.content %></textarea>
+    <label>Meta Description:<label>
+    <textarea class="meta_description" name="article[meta_description]" rows="3" cols="40"><%= @article.meta_description %></textarea>
+    <label>Meta Keywords:</label>
+    <input type="text" name="article[meta_keywords]" value="<%= @article.meta_keywords %>" />
     <div class="btn-spacer">
 	<input class="btn offset" type="submit" value="Update article" /> or <a class='btn' href='/admin'>Back</a>
 	</div>

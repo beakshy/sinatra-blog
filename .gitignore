@@ -17,3 +17,7 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+build/package.json~
+config.ru
+config.ru

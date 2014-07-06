@@ -16,12 +16,14 @@ class Article
   property :title, String
   property :content, Text
   property :timestamp, DateTime
+  property :meta_description , String , :length => 255
+  property :meta_keywords , String , :length => 255
 end
 
 DataMapper.finalize.auto_upgrade!
 
 # Define Session Key
-use Rack::Session::Cookie, :secret => 'xxxxxxxxx'
+use Rack::Session::Cookie, :secret => '1234567890!@#$%ASDFGHJKLZXCVBNMQWERTYUIPOghjklop'
 
 configure do 
     set :sinatra_authentication_view_path, Pathname(__FILE__).dirname.expand_path + "views/account"
@@ -31,7 +33,7 @@ end
 
 # Define helpers
 helpers do
- def truncate(text, length, end_string = '...</p>')
+ def truncate(text, length, end_string = '...')
   words = text.split()
   words = words[0..(length-1)].join(' ') + (words.length > length ? end_string : '')
   end
@@ -43,6 +45,20 @@ helpers do
      "#{@title}"
     else
      "Thoughts of just another geek"
+    end
+  end
+  def meta_description 
+    if @title 
+     "#{@meta_description}"
+    else
+      "Thoughts of just another geek"
+    end
+  end
+  def meta_keywords 
+    if @title 
+     "#{@meta_keywords}"
+    else
+      # output nothing
     end
   end
 end
@@ -60,6 +76,8 @@ end
 get '/articles/:id' do |id|
   @article = Article.get!(id)
   @title = @article.title
+  @meta_description = @article.meta_description
+  @meta_keywords = @article.meta_keywords
   erb :'articles/show'
 end
 

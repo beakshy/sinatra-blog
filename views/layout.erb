@@ -7,8 +7,8 @@
     <meta http-equiv="cache-control" content="max-age=50000" />
     <meta name="google-site-verification" content="UbEPfRsraaWC5PTMGFmzSod_xt0f-1r9WbrvBno9yGY" />
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta name="description" content="Random thoughts from just another geek, Mason Berkshire.">
-    <meta name="keywords" content="" >
+    <meta name="description" content="<%= meta_description %>">
+    <meta name="keywords" content="<%= meta_keywords %>" >
     <meta name="author" content="Mason Berkshire">
     <link  href="/css/dist/app.min.css?v=2" rel="stylesheet">
     <script src="/js/lib/modernizr.js" type="text/javascript"></script>
@@ -27,13 +27,12 @@
 <header>
 <h1><a href="/">@beakshy</a></h1>
 <h2>The ramblings of just another geek</h2>
-<hr />
 </header>
 <section class="container">
     <%= yield %>
 </section>
 <footer>
- <P>made with ruby, sinatra and love in los angeles</p> <p><span>all expressed thoughts and opionons are my own.</span></p>
+ <p>made with ruby, sinatra and love in los angeles</p> <p><span>all expressed thoughts and opionons are my own.</span></p>
 </footer>
 <script src="/js/require.min.js"></script>
 <script src="/js/dist/main.min.js?v=1"></script>

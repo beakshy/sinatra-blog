@@ -5,9 +5,19 @@
 @import url(lesshat.less);
 @import url(reset.less);
 
+html {overflow-y: scroll;}
 textarea {clear: both;width: 70%;height: 250px;}
+textarea.meta_description {height: 100px;}
 label {width: 100%;clear: both;}
 .clear {clear: both;margin-top: 15px;}
 .offset {background: #ce4819!important;text-decoration: none!important;}
 .btn {background: #222;.border-radius(3px);color: #fff;font-weight: 300;padding: 10px 30px 10px 30px;text-decoration: none;text-align: center;border: 0px;}
-.top-margin {margin-top: 15px;}
+.top-margin {margin-top: 25px;}
+pre {.border-radius(3px);border: 1px solid #ddd;background: #f8f8f8;padding: 10px;}
+code {.border-radius(3px);border: 1px solid #ddd;background: #f8f8f8;}
+
+.login {margin-top: -25px;display: inline-block;float: right;
+     a {color: #222;float:right;margin-right: 25px;text-decoration: none;
+     &:hover{text-decoration: underline;}
+   }
+}
