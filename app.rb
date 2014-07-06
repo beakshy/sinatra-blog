@@ -48,14 +48,14 @@ helpers do
     end
   end
   def meta_description 
-    if @title 
+    if @meta_description 
      "#{@meta_description}"
     else
       "Thoughts of just another geek"
     end
   end
   def meta_keywords 
-    if @title 
+    if @meta_keywords 
      "#{@meta_keywords}"
     else
       # output nothing
