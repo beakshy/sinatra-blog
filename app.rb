@@ -23,7 +23,7 @@ end
 DataMapper.finalize.auto_upgrade!
 
 # Define Session Key
-use Rack::Session::Cookie, :secret => '1234567890!@#$%ASDFGHJKLZXCVBNMQWERTYUIPOghjklop'
+use Rack::Session::Cookie, :secret => ''
 
 configure do 
     set :sinatra_authentication_view_path, Pathname(__FILE__).dirname.expand_path + "views/account"
