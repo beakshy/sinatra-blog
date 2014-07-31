@@ -149,3 +149,16 @@ delete '/admin/:id' do |id|
   redirect "/admin"
 end
 
+
+#############################
+# Public API
+#############################
+
+get '/api' , :provides => :json do
+  Article.all.to_json(:order => [ :timestamp.asc ])
+end
+
+get '/api/:id' , :provides => :json do |id|
+  article  = Article.get!(id)
+  article.to_json
+end
